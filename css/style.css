@@ -2626,7 +2626,7 @@ footer {
         /* Allow more height for stacked content */
     }
 
-    /* Footer Mobile Adjustments */
+    /* Footer Mobile Adjustments (Detailed Strategy) */
     .footer-heading {
         font-size: 1rem;
         margin-bottom: 1rem;
@@ -2634,6 +2634,80 @@ footer {
 
     .footer-menu a {
         font-size: 0.9rem;
+    }
+
+    /* 1. Stack columns vertically */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        /* Vertical spacing between sections */
+        text-align: center;
+        /* Default to center alignment for mobile */
+    }
+
+    /* 2. Center Brand Section & Socials */
+    .footer-brand-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-tagline {
+        margin: 0 auto 2rem auto;
+        /* Center tagline */
+    }
+
+    .footer-socials-big {
+        justify-content: center;
+    }
+
+    /* 3. Center Links Section */
+    .footer-links-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu {
+        align-items: center;
+        /* Center list items */
+    }
+
+    /* 4. Contact Section: Center the block, but keep icon+text row aligned */
+    .footer-contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center the container of links */
+        gap: 1rem;
+    }
+
+    .footer-contact-info a {
+        display: flex;
+        flex-direction: row !important;
+        /* Force row layout for icon+text */
+        align-items: center;
+        justify-content: center;
+        /* Center content within the flex item */
+        width: 100%;
+        max-width: 300px;
+        /* Prevent it from being too wide */
+    }
+
+    /* 5. Bottom Row */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* 6. Back to Top - Keep floating but ensure z-index */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
     }
 }
 
