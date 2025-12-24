@@ -2512,10 +2512,17 @@ footer {
         width: 100%;
     }
 
-    /* Hide background text on mobile to fix overflow */
+    /* Show background text on mobile but scale it down */
     .hero-bg-text {
-        display: none;
+        display: block;
+        font-size: 18vw;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
     }
+
 
     .hero-intro-box {
         position: relative;
@@ -2526,37 +2533,39 @@ footer {
         margin-top: 2rem;
         z-index: 5;
         order: 2;
-        /* Text below image on mobile */
         text-align: center;
     }
 
     .hero-intro-box .name {
         font-size: 2.5rem;
-        /* Smaller heading */
     }
 
-    .hero-intro-box .tagline {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
+    /* Container for Image + Role Text */
+    .hero-visuals {
+        position: relative;
+        width: 100%;
+        order: 1;
+        display: flex;
         justify-content: center;
+        margin-top: 2rem;
     }
 
     .hero-image-container {
         position: relative;
         width: 80%;
+        /* Width matches visual design */
         height: auto;
         bottom: auto;
         right: auto;
-        margin: 2rem auto 0;
+        margin: 0;
+        /* Margin handled by wrapper */
         mask-image: none;
         -webkit-mask-image: none;
         clip-path: none;
         opacity: 1;
         animation: none;
-        order: 1;
-        /* Image above text */
+        order: unset;
+        /* Order handled by wrapper */
     }
 
     .hero-image {
@@ -2565,10 +2574,34 @@ footer {
         object-fit: contain;
     }
 
-    /* Hide decorative elements on mobile to reduce clutter */
-    .hero-role-text,
+    /* Text aligned to bottom-right of the image container area */
+    .hero-role-text {
+        display: block;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        /* Align to bottom */
+        right: 10%;
+        /* Align with right edge of 80% width image */
+        width: auto;
+        margin-top: 0;
+        /* Fluid font sizing */
+        font-size: clamp(2.5rem, 13vw, 5rem);
+        line-height: 0.8;
+        text-align: right;
+        z-index: 10;
+        -webkit-text-stroke: 1px #ffcce0;
+        opacity: 0.9;
+        pointer-events: none;
+    }
+
     .hero-subnav {
-        display: none;
+        display: block;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+        order: 4;
+        letter-spacing: 2px;
     }
 
     /* Projects Section Mobile */
@@ -2592,7 +2625,18 @@ footer {
         min-height: 550px;
         /* Allow more height for stacked content */
     }
+
+    /* Footer Mobile Adjustments */
+    .footer-heading {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-menu a {
+        font-size: 0.9rem;
+    }
 }
+
 
 @media (max-width: 480px) {
 
@@ -2601,7 +2645,12 @@ footer {
         font-size: 2rem;
     }
 
+    /* Keep footer background text hidden on very small screens if it overlaps too much, or adjust size */
     .footer-bg-text {
         display: none;
+    }
+
+    .hero-role-text {
+        font-size: 2.5rem;
     }
 }
