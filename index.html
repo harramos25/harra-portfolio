@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harra Lou Ramos | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Harra Lou Ramos - Full-Stack Developer specializing in elegant, scalable web systems.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Inter+Tight:wght@400;600&family=Manrope:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons (for the requested high-quality icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Devicon (for tech stack icons) -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('qu2wfXK0_YLCnVvLJ');
+        })();
+    </script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Header -->
+    <nav class="glass-nav" id="main-nav">
+        <div class="nav-container">
+            <!-- Zone 1: Branding -->
+            <a href="#hero" class="nav-branding">Harra Lou.</a>
+
+            <!-- Zone 2: Navigation Links (Desktop) -->
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Zone 3: CTA & Mobile Toggle -->
+            <div class="nav-right">
+                <!-- <a href="#contact" class="btn-glass-nav-cta">Let's Talk</a> -->
+                <div class="hamburger-menu" id="hamburger-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-link">About Me</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#process" class="mobile-link">My Process</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="assets/documents/RAMOS - CV.pdf" class="btn-glass-mobile-cta" target="_blank" download>Download
+                CV</a>
+        </nav>
+        <div class="mobile-menu-bg-shape"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-text">PORTFOLIO</div>
+
+        <div class="hero-content">
+            <div class="hero-intro-box">
+                <h1 class="name">Harra Lou Ramos</h1>
+                <p class="tagline">Designing elegant systems that feel effortless.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="assets/documents/RAMOS - CV.pdf" class="btn btn-secondary" target="_blank"
+                        download>Download CV</a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <img src="assets/images/profile.png" alt="Harra Lou Ramos" class="hero-image">
+            </div>
+
+            <div class="hero-role-text">
+                <span>FULL</span><br>
+                <span>STACK</span><br>
+                <span>DEVELOPER</span>
+            </div>
+
+            <div class="hero-subnav">
+                WEB • SYSTEMS • UI/UX
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="glass-panel about-panel-improved">
+                <div class="about-grid-layout">
+                    <!-- Left Column: Image -->
+                    <div class="about-image-column">
+                        <div class="image-wrapper-glass" data-aos="fade-up" data-aos-delay="200">
+                            <img src="assets/images/profile.png" alt="Harra Lou Ramos" class="profile-photo">
+                            <div class="shape-accent shape-circle"></div>
+                            <div class="shape-accent shape-blob"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div class="about-content-column">
+                        <h2 class="about-headline" data-aos="fade-left" data-aos-delay="400">Hi, I’m Harra</h2>
+                        <div class="about-tagline" data-aos="fade-right" data-aos-delay="600">Full-Stack Developer &
+                            Creative Thinker</div>
+                        <div class="about-body" data-aos="fade-up" data-aos-delay="800">
+                            <p>I specialize in building structured, scalable web systems using modern technologies. My
+                                philosophy blends editorial-level design thinking with practical, performance-focused
+                                development.</p>
+                        </div>
+
+                        <!-- Tech Stack Grid -->
+                        <div class="about-skills-visual tech-grid" data-aos="zoom-in" data-aos-delay="1000">
+                            <div class="tech-tile" style="--brand-color: #E34F26;">
+                                <i class="devicon-html5-plain-wordmark colored"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #1572B6;">
+                                <i class="devicon-css3-plain-wordmark colored"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #F7DF1E;">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span>JS</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #777BB4;">
+                                <i class="devicon-php-plain colored"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #61DAFB;">
+                                <i class="devicon-react-original colored"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #4479A1;">
+                                <i class="devicon-mysql-plain-wordmark colored"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #F24E1E;">
+                                <i class="devicon-figma-plain colored"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #239120;">
+                                <i class="devicon-csharp-plain colored"></i>
+                                <span>C#</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #00599C;">
+                                <i class="devicon-cplusplus-plain colored"></i>
+                                <span>C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container skills-container">
+            <h2 class="section-header-hidden">Skills</h2>
+
+            <!-- Connection Line SVG -->
+            <svg class="skills-connector" viewBox="0 0 1000 200" preserveAspectRatio="none">
+                <path class="connector-path" d="M 150 100 L 850 100" />
+                <circle class="connector-dot" cx="150" cy="100" r="6" />
+            </svg>
+
+            <div class="skills-grid">
+                <!-- Front-End -->
+                <div class="glass-card skill-card" data-tilt data-tilt-max="5" data-aos="fade-up" data-aos-delay="0">
+                    <h3>Front-End</h3>
+                    <div class="skill-bars-container">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="devicon-html5-plain colored"></i>
+                                <span>HTML & CSS</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 95%; background: #E34F26;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span>JavaScript / React</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 85%; background: #F7DF1E;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="ri-layout-masonry-line" style="color: #FF61F6;"></i>
+                                <span>UI/UX & RWD</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 90%; background: #FF61F6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back-End -->
+                <div class="glass-card skill-card" data-tilt data-tilt-max="5" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Back-End</h3>
+                    <div class="skill-bars-container">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="devicon-php-plain colored"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 90%; background: #777BB4;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="devicon-csharp-plain colored"></i>
+                                <span>C#</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 80%; background: #239120;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <span>MySQL / DB</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 85%; background: #4479A1;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="glass-card skill-card" data-tilt data-tilt-max="5" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Tools</h3>
+                    <div class="skill-bars-container">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="devicon-git-plain colored"></i>
+                                <span>Git & GitHub</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 85%; background: #F05032;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="devicon-figma-plain colored"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 90%; background: #F24E1E;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <i class="ri-server-line" style="color: #eba417;"></i>
+                                <span>XAMPP / Server</span>
+                            </div>
+                            <div class="skill-progress-track">
+                                <div class="skill-progress-fill" style="width: 80%; background: #eba417;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (3D Glass Carousel) -->
+    <section id="projects" class="section-padding projects-section">
+        <div class="projects-bg-text">PROJECTS</div>
+
+        <!-- Abstract Background Shapes -->
+        <div class="project-shape shape-1"></div>
+        <div class="project-shape shape-2"></div>
+
+        <div class="container project-container">
+            <h2 class="section-title text-center" data-aos="fade-down">Selected Works</h2>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper project-carousel">
+                <div class="swiper-wrapper">
+
+                    <!-- Project 1: D’Marsians Taekwondo -->
+                    <div class="swiper-slide glass-project-card">
+                        <div class="card-content">
+                            <div class="project-image">
+                                <img src="assets/images/project1.png" alt="D’Marsians Taekwondo System">
+                                <div class="overlay-glow"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">D’Marsians Taekwondo</h3>
+                                <p class="project-role">Role: Front-End Developer & Quality Assurance</p>
+                                <p class="project-desc">A comprehensive web-based system designed for D’Marsians
+                                    Taekwondo Gym to simplify student enrollment, payment tracking, and administration.
+                                    The system streamlines manual processes, provides clear dashboards for collections,
+                                    and enhances communication between parents and the admin.</p>
+                                <div class="tech-tags">
+                                    <span class="glass-pill">PHP</span>
+                                    <span class="glass-pill">HTML</span>
+                                    <span class="glass-pill">CSS</span>
+                                    <span class="glass-pill">JavaScript</span>
+                                </div>
+                                <a href="https://dmarsians-taekwondo-zkcmy.ondigitalocean.app/webpage.php?fbclid=IwY2xjawO5Bq5leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEe2kxJPxEamMMBzH9FlbQcMoWA4sflQ21EnJ2ZIP16QypiA578LYBVA4TERWI_aem_5TmpmomGTKKBbZlaMPSb2A"
+                                    class="btn-glass-sm" target="_blank">View Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: NCIP Job Application System -->
+                    <div class="swiper-slide glass-project-card">
+                        <div class="card-content">
+                            <div class="project-image">
+                                <img src="assets/images/project2.png" alt="NCIP Job Application System">
+                                <div class="overlay-glow"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">NCIP Job Portal</h3>
+                                <p class="project-role">Role: Full-Stack Developer</p>
+                                <p class="project-desc">A web-based portal for NCIP Region IX that allows applicants to
+                                    view and submit job applications online while enabling admins to manage job postings
+                                    efficiently. Designed to handle submissions, deadlines, and archived applications in
+                                    a structured way, improving HR workflow.</p>
+                                <div class="tech-tags">
+                                    <span class="glass-pill">PHP</span>
+                                    <span class="glass-pill">HTML</span>
+                                    <span class="glass-pill">CSS</span>
+                                    <span class="glass-pill">JavaScript</span>
+                                </div>
+                                <a href="#" class="btn-glass-sm" style="opacity: 0.6; cursor: not-allowed;">Not Yet
+                                    Deployed</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Expenses Tracking System -->
+                    <div class="swiper-slide glass-project-card">
+                        <div class="card-content">
+                            <div class="project-image">
+                                <img src="assets/images/project3.png" alt="Expenses Tracking System">
+                                <div class="overlay-glow"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Expense Tracker</h3>
+                                <p class="project-role">Role: Full-Stack Developer / Personal Project</p>
+                                <p class="project-desc">A personal project to track and manage daily expenses with a
+                                    user-friendly interface. Built to improve financial organization and budgeting
+                                    through an interactive, web-based platform.</p>
+                                <div class="tech-tags">
+                                    <span class="glass-pill">HTML</span>
+                                    <span class="glass-pill">CSS</span>
+                                    <span class="glass-pill">JavaScript</span>
+                                </div>
+                                <a href="https://harramos25.github.io/Expense-Tracking-System/" class="btn-glass-sm"
+                                    target="_blank">View Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: CassNCase Bookshop -->
+                    <div class="swiper-slide glass-project-card">
+                        <div class="card-content">
+                            <div class="project-image">
+                                <img src="assets/images/project4.png" alt="CassNCase Bookshop">
+                                <div class="overlay-glow"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">CassNCase Bookshop</h3>
+                                <p class="project-role">Role: Front-End Developer / Personal Challenge</p>
+                                <p class="project-desc">A bookstore web app designed without a traditional database,
+                                    using Google Sheets as a backend to manage book inventory and sales. Created as a
+                                    challenge to test problem-solving skills and innovative approaches to development on
+                                    a budget.</p>
+                                <div class="tech-tags">
+                                    <span class="glass-pill">HTML</span>
+                                    <span class="glass-pill">CSS</span>
+                                    <span class="glass-pill">JavaScript</span>
+                                    <span class="glass-pill">Google Sheets API</span>
+                                </div>
+                                <a href="https://harramos25.github.io/CassNcase_bookshop/" class="btn-glass-sm"
+                                    target="_blank">View Live</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Navigation & Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Process Section -->
+    <section id="process" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-down">Development Process</h2>
+
+            <!-- Process Swiper -->
+            <div class="swiper process-carousel">
+                <div class="swiper-wrapper">
+
+                    <!-- Step 01 -->
+                    <div class="swiper-slide glass-process-card">
+                        <div class="process-bg-number">01</div>
+                        <div class="process-card-inner">
+                            <div class="process-icon-box">
+                                <i class="ri-search-eye-line"></i>
+                                <div class="icon-glow-ring"></div>
+                            </div>
+                            <h3 class="process-title">Planning & Research</h3>
+                            <p class="process-desc">Understanding your goals, target audience, and technical
+                                requirements to build a solid roadmap.</p>
+                            <div class="process-decor-line"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 02 -->
+                    <div class="swiper-slide glass-process-card">
+                        <div class="process-bg-number">02</div>
+                        <div class="process-card-inner">
+                            <div class="process-icon-box">
+                                <i class="ri-palette-line"></i>
+                                <div class="icon-glow-ring"></div>
+                            </div>
+                            <h3 class="process-title">Design & Prototyping</h3>
+                            <p class="process-desc">Creating high-fidelity wireframes and interactive prototypes that
+                                align with your brand identity.</p>
+                            <div class="process-decor-line"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 03 -->
+                    <div class="swiper-slide glass-process-card">
+                        <div class="process-bg-number">03</div>
+                        <div class="process-card-inner">
+                            <div class="process-icon-box">
+                                <i class="ri-code-s-slash-line"></i>
+                                <div class="icon-glow-ring"></div>
+                            </div>
+                            <h3 class="process-title">Development</h3>
+                            <p class="process-desc">Writing clean, scalable code using modern frameworks to bring the
+                                designs to life.</p>
+                            <div class="process-decor-line"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 04 -->
+                    <div class="swiper-slide glass-process-card">
+                        <div class="process-bg-number">04</div>
+                        <div class="process-card-inner">
+                            <div class="process-icon-box">
+                                <i class="ri-rocket-line"></i>
+                                <div class="icon-glow-ring"></div>
+                            </div>
+                            <h3 class="process-title">Testing & Launch</h3>
+                            <p class="process-desc">Rigorous testing for performance and bugs before the final
+                                deployment to production.</p>
+                            <div class="process-decor-line"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination process-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="glass-panel contact-panel-improved">
+
+                <!-- Left: CTA & Form -->
+                <div class="contact-left">
+                    <div class="contact-text-content">
+                        <h2>Let’s Build<br>Something Together.</h2>
+                        <p class="contact-tagline">I’m always open to new challenges, collaborations, or freelance
+                            projects.</p>
+                        <div class="accent-shape-glow"></div>
+                    </div>
+
+                    <form class="contact-form-refined" id="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="user_name" placeholder="Name" class="glass-input-refined" required>
+                            <input type="email" name="user_email" placeholder="Email" class="glass-input-refined"
+                                required>
+                        </div>
+                        <textarea name="message" placeholder="Tell me about your project..." rows="3"
+                            class="glass-input-refined" required></textarea>
+                        <button type="submit" class="btn-glass-submit">
+                            <span>Send Message</span>
+                            <i class="ri-send-plane-fill"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right: Contact Cards -->
+                <div class="contact-right">
+                    <div class="contact-grid">
+                        <!-- Email -->
+                        <a href="mailto:harra.ramos26@gmail.com" class="contact-card-item">
+                            <div class="icon-box"><i class="ri-mail-send-line"></i></div>
+                            <div class="card-info">
+                                <span class="card-label">Email</span>
+                                <span class="card-value">harra.ramos26@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone -->
+                        <a href="tel:+639123456789" class="contact-card-item">
+                            <div class="icon-box"><i class="ri-smartphone-line"></i></div>
+                            <div class="card-info">
+                                <span class="card-label">Phone</span>
+                                <span class="card-value">+63 912 345 6789</span>
+                            </div>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/harramos25" class="contact-card-item">
+                            <div class="icon-box"><i class="ri-github-line"></i></div>
+                            <div class="card-info">
+                                <span class="card-label">GitHub</span>
+                                <span class="card-value">Explore Code</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/harra-ramos-8388753a0/" class="contact-card-item">
+                            <div class="icon-box"><i class="ri-linkedin-line"></i></div>
+                            <div class="card-info">
+                                <span class="card-label">LinkedIn</span>
+                                <span class="card-value">Connect Professionally</span>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/message/R3TU277DN4MQC1" class="contact-card-item">
+                            <div class="icon-box"><i class="ri-whatsapp-line"></i></div>
+                            <div class="card-info">
+                                <span class="card-label">WhatsApp</span>
+                                <span class="card-value">Chat with Me</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="crystal-footer">
+        <div class="footer-bg-text">PORTFOLIO</div>
+
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Col 1: Branding -->
+                <div class="footer-brand-col">
+                    <h2 class="footer-logo">Harra Lou Ramos</h2>
+                    <p class="footer-tagline">Crafting elegant digital experiences with a focus on structure & motion.
+                    </p>
+                    <div class="footer-socials-big">
+                        <a href="https://github.com/harramos25" class="social-glass-btn"><i
+                                class="ri-github-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/harra-ramos-8388753a0/" class="social-glass-btn"><i
+                                class="ri-linkedin-fill"></i></a>
+                        <a href="https://www.instagram.com/harramos_26/" class="social-glass-btn"><i
+                                class="ri-instagram-line"></i></a>
+                        <a href="https://www.facebook.com/share/1A69aYWRP3/?mibextid=wwXIfr" class="social-glass-btn"><i
+                                class="ri-facebook-fill"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-menu">
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Work & Projects</a></li>
+                        <li><a href="#skills">Technical Skills</a></li>
+                        <li><a href="#process">My Process</a></li>
+                        <li><a href="#contact">Get in Touch</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Connect / Newsletter -->
+                <div class="footer-connect-col">
+                    <h4 class="footer-heading">Let's Connect</h4>
+                    <div class="footer-contact-info">
+                        <a href="mailto:harra.ramos26@gmail.com"><i class="ri-mail-send-line"></i>
+                            harra.ramos26@gmail.com</a>
+                        <a href="tel:+639123456789"><i class="ri-smartphone-line"></i> +63 912 345 6789</a>
+                        <a href="https://wa.me/message/R3TU277DN4MQC1"><i class="ri-whatsapp-line"></i> Chat on
+                            WhatsApp</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Row: Credits -->
+            <div class="footer-bottom">
+                <span class="copyright">© 2025 Harra Lou Ramos. All Rights Reserved.</span>
+                <span class="designer-credit">Designed & Developed by Me</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
