@@ -2615,19 +2615,28 @@ footer {
     /* Subnav (WEB • SYSTEMS...) positioned clearly */
     .hero-subnav {
         position: absolute;
-        bottom: auto;
-        top: -60px;
-        /* Above role text */
+        bottom: 35%;
+        /* Positioned above the role text approx */
+        top: auto;
         left: 50%;
         transform: translateX(-50%);
         right: auto;
         width: 100%;
         text-align: center;
-        font-size: 0.9rem;
-        letter-spacing: 2px;
+        font-size: 1rem;
+        letter-spacing: 3px;
         color: #1a1a1a;
         font-weight: 700;
         z-index: 3;
+        margin-bottom: 1rem;
+    }
+
+    /* Adjust Role Text to be safe */
+    .hero-role-text {
+        bottom: 0%;
+        font-size: 15vw;
+        /* Slightly smaller to ensure fit */
+        padding-bottom: 2rem;
     }
 
     /* Projects Section Mobile */
