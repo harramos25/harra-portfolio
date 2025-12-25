@@ -352,7 +352,7 @@ img {
 /* Layer 3: Role Title */
 .hero-role-text {
     position: absolute;
-    bottom: 1%;
+    bottom: 0;
     right: 5%;
     font-family: var(--font-heading);
     font-size: 8rem;
