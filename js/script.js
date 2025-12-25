@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Mouse Parallax (3D Illusion)
     heroSection.addEventListener('mousemove', (e) => {
+        if (window.innerWidth <= 900) return; // Disable on mobile
+
         const x = (window.innerWidth / 2 - e.pageX) / 25; // Division controls speed
         const y = (window.innerHeight / 2 - e.pageY) / 25;
 
@@ -123,6 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Scroll Exit Parallax
     window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 900) return; // Disable on mobile
+
         const scrollY = window.scrollY;
         if (scrollY < window.innerHeight) {
             // "Exit" Effect: Text scrolls up faster, Image stays 'sticky' longer
