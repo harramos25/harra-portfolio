@@ -2465,157 +2465,169 @@ footer {
         /* Ensure this is on top of everything */
     }
 
+    /* Floating Pill Navbar */
     .glass-nav {
-        width: 100%;
-        /* Full width to act like a normal mobile navbar */
-        left: 0;
-        transform: none;
-        /* Remove centering transform */
-        top: 0;
-        border-radius: 0;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        padding: 1rem 1.5rem;
-        background: rgba(255, 255, 255, 0.85);
-        /* More solid for mobile readability */
-        backdrop-filter: blur(15px);
-    }
-}
-
-/* Rest of Mobile Fixes */
-
-@media (max-width: 768px) {
-
-    /* Global Adjustments */
-    .section-padding {
-        padding: 4rem 0;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 2rem;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+        border-radius: 30px;
+        padding: 0.8rem 1.5rem;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
 
     /* Hero Section Mobile */
     .hero-section {
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding-top: 100px;
-        /* Space for fixed header */
+        justify-content: flex-start;
+        /* Start from top */
+        padding-top: 140px;
+        /* Space for header + spacing */
         height: auto;
         min-height: 100vh;
         overflow-x: hidden;
+        gap: 2rem;
     }
 
+    /* Order: Intro (Text) First, Visuals (Image) Second */
     .hero-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 100%;
+        height: 100%;
     }
 
-    /* Show background text on mobile but scale it down */
-    .hero-bg-text {
-        display: block;
-        font-size: 18vw;
-        top: 15%;
+    .hero-intro-box {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        z-index: 10;
+        /* Above visuals if needed */
+    }
+
+    .hero-intro-box .name {
+        font-size: 1.2rem;
+        font-family: var(--font-body);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .hero-intro-box .tagline {
+        font-size: 2.2rem;
+        font-family: var(--font-display);
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        color: #1a1a1a;
+    }
+
+    /* Stacked Buttons */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 250px;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 50px;
+        /* Rounded pills */
+    }
+
+    /* Visuals: Image + Background Text */
+    .hero-visuals {
+        order: 2;
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        margin-top: auto;
+        /* Push to bottom */
+        min-height: 400px;
+    }
+
+    .hero-image-container {
+        width: 85%;
+        max-width: 400px;
+        height: auto;
+        position: relative;
+        right: auto;
+        bottom: 0;
+        z-index: 2;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        opacity: 1;
+        clip-path: none;
+        animation: none;
+        mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+        -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0));
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Text BEHIND Image */
+    .hero-role-text {
+        position: absolute;
+        bottom: 0;
+        right: auto;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
         text-align: center;
-    }
-
-
-    .hero-intro-box {
-        position: relative;
-        top: auto;
-        left: auto;
-        max-width: 100%;
-        padding: 0 1.5rem;
-        margin-top: 2rem;
-        z-index: 5;
-        order: 2;
-        text-align: center;
-    }
-
-    .hero-intro-box .name {
-        font-size: 2.5rem;
-    }
-
-    /* Container for Image + Role Text */
-    .hero-visuals {
-        position: relative;
-        width: 100%;
-        order: 1;
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
-    }
-
-    .hero-image-container {
-        position: relative;
-        width: 80%;
-        /* Width matches visual design */
-        height: auto;
-        bottom: auto;
-        right: auto;
-        margin: 0;
-        /* Margin handled by wrapper */
-        mask-image: none;
-        -webkit-mask-image: none;
-        clip-path: none;
-        opacity: 1;
-        animation: none;
-        order: unset;
-        /* Order handled by wrapper */
-    }
-
-    .hero-image {
-        position: relative;
-        max-height: 400px;
-        object-fit: contain;
-    }
-
-    /* Text aligned to bottom-right of the image container area */
-    .hero-role-text {
-        display: block;
-        position: absolute;
-        top: auto;
-        bottom: 0;
-        /* Align to bottom */
-        right: 10%;
-        /* Align with right edge of 80% width image */
-        width: auto;
-        margin-top: 0;
-        /* Fluid font sizing */
-        font-size: clamp(2.5rem, 13vw, 5rem);
+        font-size: 18vw;
+        /* Massive */
         line-height: 0.8;
-        text-align: right;
-        z-index: 10;
-        -webkit-text-stroke: 1px #ffcce0;
-        opacity: 0.9;
+        z-index: 1;
+        /* Behind image */
+        color: #1a1a1a;
+        -webkit-text-stroke: 0;
+        opacity: 1;
         pointer-events: none;
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero-subnav {
+    .hero-role-text span {
         display: block;
+    }
+
+    /* Subnav (WEB • SYSTEMS...) positioned clearly */
+    .hero-subnav {
         position: absolute;
-        top: auto;
-        bottom: 7rem;
-        /* Adjusted as per user request */
-        right: 10%;
-        /* Align with role text */
-        margin: 0;
-        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-        order: unset;
-        /* Remove order since we are using absolute */
+        bottom: auto;
+        top: -60px;
+        /* Above role text */
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
         letter-spacing: 2px;
-        text-align: right;
-        width: auto;
-        z-index: 10;
-        pointer-events: none;
+        color: #1a1a1a;
+        font-weight: 700;
+        z-index: 3;
     }
 
     /* Projects Section Mobile */
