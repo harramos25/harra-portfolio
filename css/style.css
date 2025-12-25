@@ -2597,11 +2597,21 @@ footer {
 
     .hero-subnav {
         display: block;
-        margin-top: 1.5rem;
-        margin-bottom: 2rem;
+        position: absolute;
+        top: auto;
+        bottom: 7rem;
+        /* Adjusted as per user request */
+        right: 10%;
+        /* Align with role text */
+        margin: 0;
         font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-        order: 4;
+        order: unset;
+        /* Remove order since we are using absolute */
         letter-spacing: 2px;
+        text-align: right;
+        width: auto;
+        z-index: 10;
+        pointer-events: none;
     }
 
     /* Projects Section Mobile */
