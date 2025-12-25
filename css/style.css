@@ -336,6 +336,10 @@ img {
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
 
+    /* Flexbox for bottom alignment */
+    display: flex;
+    align-items: flex-end;
+
     /* Animation: Curtain Reveal */
     clip-path: inset(100% 0 0 0);
     /* Hidden at bottom */
