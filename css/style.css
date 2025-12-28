@@ -1848,7 +1848,7 @@ footer {
     position: relative;
     overflow: hidden;
     height: auto;
-    min-height: 500px;
+    min-height: 420px;
     /* Ensure some height consistency */
     transform-style: preserve-3d;
     /* For inner 3D elements */
@@ -2877,4 +2877,87 @@ footer {
 
 .project-carousel.aos-animate .swiper-slide:nth-child(5) {
     transition-delay: 0.8s;
+}
+
+/* --- Mobile Responsiveness Fixes (About & Contact) --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* About Section */
+    .about-panel-improved {
+        padding: 1.5rem !important;
+        gap: 2rem;
+    }
+
+    .about-headline {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .about-tagline {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-body p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-grid-layout {
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-wrapper-glass {
+        width: 200px;
+        height: 250px;
+    }
+
+    .shape-circle,
+    .shape-blob {
+        transform: scale(0.6);
+    }
+
+    /* Contact Section */
+    .contact-panel-improved {
+        padding: 1.5rem !important;
+        gap: 2rem;
+    }
+
+    .contact-text-content h2 {
+        font-size: 2rem;
+    }
+
+    .contact-tagline {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-grid {
+        gap: 0.8rem;
+    }
+
+    .contact-card-item {
+        padding: 1rem;
+    }
+
+    .icon-box {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    /* Projects Section Mobile */
+    .glass-project-card {
+        min-height: 400px;
+        gap: 1rem;
+    }
+
+    .project-image {
+        height: 150px;
+    }
 }
