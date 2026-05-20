@@ -1,7 +1,7 @@
 // api/chat.js - Vercel Serverless Function
 // Proxies chat requests to Google Gemini API securely
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
