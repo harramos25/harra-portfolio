@@ -48,7 +48,7 @@ Additional: C++, Framer Motion, Vite, React Router DOM
    - Live: https://dmarsian-taekwondo-gym.com
 
 2. NCIP IX Job Portal
-   - Role: Full Stack Developer
+   - Role: Full Stack Web Developer
    - A web-based recruitment portal built for the National Commission on Indigenous Peoples – Region IX (NCIP-IX) to simplify and digitize their recruitment process. Connects job seekers and HR administrators in one platform, replacing manual application handling with a centralized online workflow.
    - Applicants can browse job openings, view requirements, and submit applications online with uploaded documents.
    - On the admin side: secure management of job postings, applicant tracking, recruitment status updates, dashboard for monitoring applications, and tools for reviewing and downloading applicant files.
@@ -62,13 +62,13 @@ Additional: C++, Framer Motion, Vite, React Router DOM
    - Live: https://harramos.github.io/Expense-Tracking-System/
 
 4. Bookshop System
-   - Role: Front-End Developer / Personal Challenge
+   - Role: Full Stack Web Developer / Personal Challenge
    - A bookstore web app designed without a traditional database, using Google Sheets as a backend to manage book inventory and sales. Created to test problem-solving and innovative development approaches.
    - Tech: HTML, CSS, JavaScript, Google Sheets API
    - Live: https://harramos.github.io/CassNcase_bookshop/
 
 5. OJTime Tracking (OJT DTR System)
-   - Role: Full Stack Developer
+   - Role: Full Stack Web Developer
    - A web-based Daily Time Record (DTR) system built during internship to replace manual paper logs and Excel encoding. Lets users digitally record time-in/time-out, automatically calculates total hours, validates entries, and generates print-ready DTR.
    - Features: PIN-based login, real-time time logging, manual past entry encoding, attendance tracking, automated DTR export, and Progressive Web App (PWA) support for mobile installation with offline access.
    - Built the entire system solo — UI/UX design, front-end, core logic, Supabase integration, PWA setup, print-ready layout, deployment.
