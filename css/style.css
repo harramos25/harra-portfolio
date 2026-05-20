@@ -3576,6 +3576,14 @@ body.modal-open {
     overflow-y: auto;
     transition: border-color 0.25s ease, background 0.25s ease;
     outline: none;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chatbot-input::-webkit-scrollbar {
+    display: none;
 }
 
 .chatbot-input::placeholder {
