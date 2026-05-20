@@ -1,0 +1,9 @@
+{
+  "name": "harra-portfolio",
+  "version": "1.0.0",
+  "description": "Harra Lou Ramos Portfolio with LUX AI Chatbot",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "private": true
+}
