@@ -155,7 +155,7 @@
       removeTypingIndicator();
       appendMessage(
         'assistant',
-        `Oops! Something went wrong on my end. 😅 (Error: ${err.message})`
+        "Oops! Something went wrong on my end. 😅 Please try again in a moment."
       );
       console.error('Chatbot error:', err);
     } finally {
