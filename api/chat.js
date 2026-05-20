@@ -97,40 +97,69 @@ Additional: C++, Framer Motion, Vite, React Router DOM
       parts: [{ text: msg.content }],
     }));
 
-    console.log('Sending request to Gemini API...');
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          system_instruction: {
-            parts: [{ text: systemInstruction }],
-          },
-          contents: geminiMessages,
-          generationConfig: {
-            maxOutputTokens: 512,
-            temperature: 0.7,
-          },
-        }),
-      }
-    );
+    const modelsToTry = [
+      'gemini-2.5-flash',
+      'gemini-3.5-flash',
+      'gemini-2.0-flash',
+      'gemini-1.5-flash-latest',
+      'gemini-1.5-flash'
+    ];
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Gemini API error response:', errorText);
-      return res.status(response.status).json({ 
-        error: 'AI service error', 
-        details: errorText 
-      });
+    let lastError = null;
+    let successfulReply = null;
+
+    for (const modelName of modelsToTry) {
+      try {
+        console.log(`Sending request to Gemini API model: ${modelName}...`);
+        const response = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              system_instruction: {
+                parts: [{ text: systemInstruction }],
+              },
+              contents: geminiMessages,
+              generationConfig: {
+                maxOutputTokens: 512,
+                temperature: 0.7,
+              },
+            }),
+          }
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          successfulReply =
+            data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+            "I'm having a little trouble responding right now. Please try again!";
+          break; // Stop loop, we found a working model!
+        }
+
+        const errorText = await response.text();
+        console.error(`Gemini API error response for model ${modelName}:`, errorText);
+        lastError = { status: response.status, details: errorText };
+
+        // If it's a 400 Bad Request or 403 Forbidden (like a bad API key), stop trying
+        // because it's not a model availability issue. Only continue on 404 Not Found.
+        if (response.status !== 404) {
+          break;
+        }
+      } catch (modelErr) {
+        console.error(`Error attempting model ${modelName}:`, modelErr);
+        lastError = { status: 500, details: modelErr.message };
+      }
     }
 
-    const data = await response.json();
-    const reply =
-      data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-      "I'm having a little trouble responding right now. Please try again!";
+    if (successfulReply) {
+      return res.status(200).json({ reply: successfulReply });
+    }
 
-    return res.status(200).json({ reply });
+    return res.status(lastError ? lastError.status : 500).json({ 
+      error: 'AI service error', 
+      details: lastError ? lastError.details : 'All models failed' 
+    });
   } catch (err) {
     console.error('Server error details:', err);
     return res.status(500).json({ 
