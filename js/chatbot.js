@@ -133,7 +133,17 @@
 
       removeTypingIndicator();
 
-      if (!res.ok) throw new Error('API error');
+      if (!res.ok) {
+        let errMsg = 'API error';
+        try {
+          const errData = await res.json();
+          errMsg = errData.error || errData.message || JSON.stringify(errData);
+          if (errData.details) {
+            errMsg += ` - ${errData.details}`;
+          }
+        } catch (_) {}
+        throw new Error(errMsg);
+      }
 
       const data = await res.json();
       const reply = data.reply || "I'm not sure how to answer that — please try again!";
@@ -145,7 +155,7 @@
       removeTypingIndicator();
       appendMessage(
         'assistant',
-        "Oops! Something went wrong on my end. 😅 Please try again in a moment."
+        `Oops! Something went wrong on my end. 😅 (Error: ${err.message})`
       );
       console.error('Chatbot error:', err);
     } finally {
