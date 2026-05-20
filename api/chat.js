@@ -104,7 +104,7 @@ Additional: C++, Framer Motion, Vite, React Router DOM
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          systemInstruction: {
+          system_instruction: {
             parts: [{ text: systemInstruction }],
           },
           contents: geminiMessages,
