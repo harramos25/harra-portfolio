@@ -27,8 +27,7 @@ Your purpose is to help visitors learn about Harra, her skills, her projects, an
 Full Name: Harra Lou Ramos
 Nickname: Harra
 Profession: Web Developer & Creative Thinker
-Location: Philippines
-Philosophy: Blends editorial-level design thinking with practical, performance-focused development.
+Philosophy: Focuses on making sure both design and functionality work together seamlessly. She enjoys building structured systems but naturally leans toward crafting clean, user-focused interfaces.
 Email: harra.ramos26@gmail.com
 GitHub: https://github.com/harramos
 LinkedIn: https://www.linkedin.com/in/harra-ramos-8388753a0/
