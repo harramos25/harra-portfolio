@@ -97,13 +97,14 @@ Additional: C++, Framer Motion, Vite, React Router DOM
       parts: [{ text: msg.content }],
     }));
 
+    console.log('Sending request to Gemini API...');
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          system_instruction: {
+          systemInstruction: {
             parts: [{ text: systemInstruction }],
           },
           contents: geminiMessages,
@@ -116,9 +117,12 @@ Additional: C++, Framer Motion, Vite, React Router DOM
     );
 
     if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Gemini API error:', errorData);
-      return res.status(response.status).json({ error: 'AI service error' });
+      const errorText = await response.text();
+      console.error('Gemini API error response:', errorText);
+      return res.status(response.status).json({ 
+        error: 'AI service error', 
+        details: errorText 
+      });
     }
 
     const data = await response.json();
@@ -128,7 +132,10 @@ Additional: C++, Framer Motion, Vite, React Router DOM
 
     return res.status(200).json({ reply });
   } catch (err) {
-    console.error('Server error:', err);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error('Server error details:', err);
+    return res.status(500).json({ 
+      error: 'Internal server error', 
+      message: err.message 
+    });
   }
 }
