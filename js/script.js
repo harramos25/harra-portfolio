@@ -183,6 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
         initialSlide: 1, // Start focused on the second card usually
         loop: true,
         speed: 800, // Smooth transition speed
+        observer: true,
+        observeParents: true,
 
         // 3D Effect Configuration
         coverflowEffect: {
@@ -315,5 +317,108 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
+    // --- Project Details Modal Logic ---
+    const modal = document.getElementById('project-modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalRole = document.getElementById('modal-role');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalTags = document.getElementById('modal-tags');
+    const modalLiveLink = document.getElementById('modal-live-link');
+
+    function openProjectModal(card) {
+        // Extract project details from card
+        const img = card.querySelector('.project-image img');
+        const title = card.querySelector('.project-title');
+        const role = card.querySelector('.project-role');
+        const hiddenDetails = card.querySelector('.project-details-hidden');
+        const tags = card.querySelector('.tech-tags');
+        const liveLink = card.querySelector('.card-buttons a'); // live view button (if it exists)
+
+        // Populate modal fields
+        if (img) {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt || 'Project Preview';
+        }
+        if (title) modalTitle.textContent = title.textContent;
+        if (role) modalRole.textContent = role.textContent;
+        
+        if (hiddenDetails) {
+            // Use innerHTML to load paragraphs and formatting
+            modalDesc.innerHTML = hiddenDetails.innerHTML;
+        } else {
+            // Fallback to text description if hiddenDetails doesn't exist
+            const fallbackDesc = card.querySelector('.project-desc');
+            modalDesc.innerHTML = fallbackDesc ? `<p>${fallbackDesc.textContent}</p>` : '';
+        }
+
+        const hiddenTags = card.querySelector('.tech-tags-hidden');
+        if (hiddenTags) {
+            modalTags.innerHTML = hiddenTags.innerHTML;
+        } else if (tags) {
+            modalTags.innerHTML = tags.innerHTML;
+        } else {
+            modalTags.innerHTML = '';
+        }
+
+        // Show/hide live link button in modal
+        if (liveLink && liveLink.getAttribute('href')) {
+            modalLiveLink.href = liveLink.getAttribute('href');
+            modalLiveLink.style.display = 'inline-block';
+        } else {
+            modalLiveLink.href = '';
+            modalLiveLink.style.display = 'none';
+        }
+
+        // Reset scroll position of modal content to top
+        const modalContent = modal.querySelector('.project-modal-content');
+        if (modalContent) {
+            modalContent.scrollTop = 0;
+        }
+
+        // Open modal
+        modal.classList.add('active');
+        document.documentElement.classList.add('modal-open');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeProjectModal() {
+        modal.classList.remove('active');
+        document.documentElement.classList.remove('modal-open');
+        document.body.classList.remove('modal-open');
+    }
+
+    // Event delegation to support dynamically cloned slides in Swiper loop
+    document.addEventListener('click', (e) => {
+        const detailBtn = e.target.closest('.open-details-btn');
+        if (detailBtn) {
+            const projectCard = detailBtn.closest('.glass-project-card');
+            if (projectCard) {
+                openProjectModal(projectCard);
+            }
+        }
+    });
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeProjectModal);
+    }
+
+    if (modal) {
+        // Close when clicking overlay (backdrop)
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeProjectModal();
+            }
+        });
+    }
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            closeProjectModal();
+        }
+    });
 
 });

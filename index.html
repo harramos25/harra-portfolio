@@ -208,6 +208,14 @@
                                 <i class="devicon-bootstrap-plain-wordmark colored"></i>
                                 <span>Bootstrap</span>
                             </div>
+                            <div class="tech-tile" style="--brand-color: #3ECF8E;">
+                                <i class="devicon-supabase-plain colored"></i>
+                                <span>Supabase</span>
+                            </div>
+                            <div class="tech-tile" style="--brand-color: #FFFFFF;">
+                                <i class="devicon-vercel-original"></i>
+                                <span>Vercel</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -347,7 +355,7 @@
         <div class="project-shape shape-2"></div>
 
         <div class="container project-container">
-            <h2 class="section-title text-center" data-aos="fade-down">Selected Works</h2>
+            <h2 class="section-title text-center" data-aos="fade-down">Projects</h2>
 
             <!-- Swiper Carousel -->
             <div class="swiper project-carousel" data-aos="fade-up" data-aos-delay="200">
@@ -363,18 +371,26 @@
                             <div class="project-info">
                                 <h3 class="project-title">D’Marsians Taekwondo</h3>
                                 <p class="project-role">Role: Front-End Developer & Quality Assurance</p>
-                                <p class="project-desc">A comprehensive web-based system designed for D’Marsians
-                                    Taekwondo Gym to simplify student enrollment, payment tracking, and administration.
-                                    The system streamlines manual processes, provides clear dashboards for collections,
-                                    and enhances communication between parents and the admin.</p>
+                                <p class="project-desc">A comprehensive web-based system designed for D’Marsians Taekwondo Gym to simplify student enrollment, payment tracking, and administration.</p>
+                                
+                                <!-- Hidden Detailed Info -->
+                                <div class="project-details-hidden" style="display: none;">
+                                    <div class="full-desc">
+                                        <p>A comprehensive web-based system designed for D’Marsians Taekwondo Gym to simplify student enrollment, payment tracking, and administration.</p>
+                                        <p>The system streamlines manual processes, provides clear dashboards for collections, and enhances communication between parents and the admin.</p>
+                                    </div>
+                                </div>
+
                                 <div class="tech-tags">
                                     <span class="glass-pill">PHP</span>
                                     <span class="glass-pill">HTML</span>
                                     <span class="glass-pill">CSS</span>
                                     <span class="glass-pill">JavaScript</span>
                                 </div>
-                                <a href="https://dmarsian-taekwondo-gym.com"
-                                    class="btn-glass-sm" target="_blank">View Live</a>
+                                <div class="card-buttons">
+                                    <button class="btn-glass-sm open-details-btn">See More</button>
+                                    <a href="https://dmarsian-taekwondo-gym.com" class="btn-glass-sm" target="_blank">View Live</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -388,18 +404,48 @@
                             </div>
                             <div class="project-info">
                                 <h3 class="project-title">NCIP IX Job Portal</h3>
-                                <p class="project-role">Role: Web Developer</p>
-                                <p class="project-desc">A web-based portal for NCIP Region IX that allows applicants to
-                                    view and submit job applications online while enabling admins to manage job postings
-                                    efficiently. Designed to handle submissions, deadlines, and archived applications in
-                                    a structured way, improving HR workflow.</p>
-                                <div class="tech-tags">
-                                    <span class="glass-pill">PHP</span>
-                                    <span class="glass-pill">HTML</span>
-                                    <span class="glass-pill">CSS</span>
-                                    <span class="glass-pill">JavaScript</span>
+                                <p class="project-role">Role: Full Stack Developer</p>
+                                <p class="project-desc">A web-based recruitment portal for NCIP-IX designed to simplify and digitize application handling, connecting job seekers and HR admins in one platform.</p>
+                                
+                                <!-- Hidden Detailed Info -->
+                                <div class="project-details-hidden" style="display: none;">
+                                    <div class="full-desc">
+                                        <p>The NCIP-IX Job Portal is a web-based system built for the National Commission on Indigenous Peoples – Region IX to simplify and digitize their recruitment process. It connects job seekers and HR administrators in one platform, replacing manual application handling with a centralized online workflow.</p>
+                                        <p>Applicants can browse job openings, view requirements, and submit applications online with uploaded documents. Everything is handled digitally for faster and more organized submission.</p>
+                                        <p>On the admin side, the system allows secure management of job postings, applicant tracking, and recruitment status updates. It also includes a dashboard for monitoring applications and tools for reviewing and downloading applicant files efficiently.</p>
+                                    </div>
                                 </div>
-                                <a href="https://ncip-ix-job-portal.vercel.app" class="btn-glass-sm" target="_blank">View Live</a>
+
+                                <div class="tech-tags">
+                                    <span class="glass-pill">React (v18.3.1)</span>
+                                    <span class="glass-pill">Supabase</span>
+                                    <span class="glass-pill">SQL (PostgreSQL)</span>
+                                    <span class="glass-pill">Framer Motion</span>
+                                    <span class="glass-pill">Vercel</span>
+                                </div>
+
+                                <!-- Full Hidden Tech Stack for Modal -->
+                                <div class="tech-tags-hidden" style="display: none;">
+                                    <span class="glass-pill">JavaScript (ES6+)</span>
+                                    <span class="glass-pill">HTML5</span>
+                                    <span class="glass-pill">CSS3</span>
+                                    <span class="glass-pill">SQL (PostgreSQL)</span>
+                                    <span class="glass-pill">React (v18.3.1)</span>
+                                    <span class="glass-pill">Vite</span>
+                                    <span class="glass-pill">React Router DOM</span>
+                                    <span class="glass-pill">Supabase JS</span>
+                                    <span class="glass-pill">Framer Motion</span>
+                                    <span class="glass-pill">Recharts</span>
+                                    <span class="glass-pill">JSZip</span>
+                                    <span class="glass-pill">File Saver</span>
+                                    <span class="glass-pill">Lucide React</span>
+                                    <span class="glass-pill">Supabase</span>
+                                    <span class="glass-pill">Vercel</span>
+                                </div>
+                                <div class="card-buttons">
+                                    <button class="btn-glass-sm open-details-btn">See More</button>
+                                    <a href="https://ncip-ix-job-portal.vercel.app" class="btn-glass-sm" target="_blank">View Live</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -414,16 +460,25 @@
                             <div class="project-info">
                                 <h3 class="project-title">Expense Tracker</h3>
                                 <p class="project-role">Role: Web Developer / Personal Project</p>
-                                <p class="project-desc">A personal project to track and manage daily expenses with a
-                                    user-friendly interface. Built to improve financial organization and budgeting
-                                    through an interactive, web-based platform.</p>
+                                <p class="project-desc">A personal project to track and manage daily expenses with a user-friendly interface. Built to improve financial organization and budgeting.</p>
+                                
+                                <!-- Hidden Detailed Info -->
+                                <div class="project-details-hidden" style="display: none;">
+                                    <div class="full-desc">
+                                        <p>A personal project to track and manage daily expenses with a user-friendly interface.</p>
+                                        <p>Built to improve financial organization and budgeting through an interactive, web-based platform.</p>
+                                    </div>
+                                </div>
+
                                 <div class="tech-tags">
                                     <span class="glass-pill">HTML</span>
                                     <span class="glass-pill">CSS</span>
                                     <span class="glass-pill">JavaScript</span>
                                 </div>
-                                <a href="https://harramos25.github.io/Expense-Tracking-System/" class="btn-glass-sm"
-                                    target="_blank">View Live</a>
+                                <div class="card-buttons">
+                                    <button class="btn-glass-sm open-details-btn">See More</button>
+                                    <a href="https://harramos.github.io/Expense-Tracking-System/" class="btn-glass-sm" target="_blank">View Live</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -438,18 +493,64 @@
                             <div class="project-info">
                                 <h3 class="project-title">Bookshop System</h3>
                                 <p class="project-role">Role: Front-End Developer / Personal Challenge</p>
-                                <p class="project-desc">A bookstore web app designed without a traditional database,
-                                    using Google Sheets as a backend to manage book inventory and sales. Created as a
-                                    challenge to test problem-solving skills and innovative approaches to development on
-                                    a budget.</p>
+                                <p class="project-desc">A bookstore web app designed without a traditional database, using Google Sheets as a backend to manage book inventory and sales.</p>
+                                
+                                <!-- Hidden Detailed Info -->
+                                <div class="project-details-hidden" style="display: none;">
+                                    <div class="full-desc">
+                                        <p>A bookstore web app designed without a traditional database, using Google Sheets as a backend to manage book inventory and sales.</p>
+                                        <p>Created as a challenge to test problem-solving skills and innovative approaches to development on a budget.</p>
+                                    </div>
+                                </div>
+
                                 <div class="tech-tags">
                                     <span class="glass-pill">HTML</span>
                                     <span class="glass-pill">CSS</span>
                                     <span class="glass-pill">JavaScript</span>
                                     <span class="glass-pill">Google Sheets API</span>
                                 </div>
-                                <a href="https://harramos25.github.io/CassNcase_bookshop/" class="btn-glass-sm"
-                                    target="_blank">View Live</a>
+                                <div class="card-buttons">
+                                    <button class="btn-glass-sm open-details-btn">See More</button>
+                                    <a href="https://harramos.github.io/CassNcase_bookshop/" class="btn-glass-sm" target="_blank">View Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: OJTime Tracking -->
+                    <div class="swiper-slide glass-project-card">
+                        <div class="card-content">
+                            <div class="project-image">
+                                <img src="assets/images/project5.png" alt="OJTime Tracking">
+                                <div class="overlay-glow"></div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">OJTime Tracking</h3>
+                                <p class="project-role">Role: Full Stack Developer</p>
+                                <p class="project-desc">A web-based Daily Time Record (DTR) system built to replace manual paper logs with real-time tracking, PIN login, and PWA support.</p>
+                                
+                                <!-- Hidden Detailed Info -->
+                                <div class="project-details-hidden" style="display: none;">
+                                    <div class="full-desc">
+                                        <p>OJT Time Tracking is a web-based Daily Time Record (DTR) system I built during my internship to replace manual paper logs and Excel encoding. It lets users digitally record time-in and time-out, automatically calculates total hours, validates entries, and generates a properly formatted DTR ready for printing and submission.</p>
+                                        <p>The system includes PIN-based login, real-time time logging, manual past entry encoding, attendance tracking, and automated DTR export with official layout and institutional details. It is also built as a Progressive Web App (PWA), so it can be installed on mobile devices and used even with unstable internet connection.</p>
+                                        <h4>Role and Contribution</h4>
+                                        <p>I built the entire system from scratch—handling UI/UX design, front-end development, core system logic, validation rules, Supabase database integration, PWA setup, and print-ready document layout. I also managed the system architecture, responsiveness across devices, and deployment on Vercel.</p>
+                                    </div>
+                                </div>
+
+                                <div class="tech-tags">
+                                    <span class="glass-pill">HTML</span>
+                                    <span class="glass-pill">CSS</span>
+                                    <span class="glass-pill">JavaScript</span>
+                                    <span class="glass-pill">Supabase</span>
+                                    <span class="glass-pill">PWA</span>
+                                    <span class="glass-pill">Vercel</span>
+                                </div>
+                                <div class="card-buttons">
+                                    <button class="btn-glass-sm open-details-btn">See More</button>
+                                    <a href="https://ojt-dtr-ten.vercel.app/" class="btn-glass-sm" target="_blank">View Live</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -591,7 +692,7 @@
                         </a>
 
                         <!-- GitHub -->
-                        <a href="https://github.com/harramos25" class="contact-card-item">
+                        <a href="https://github.com/harramos" class="contact-card-item">
                             <div class="icon-box"><i class="ri-github-line"></i></div>
                             <div class="card-info">
                                 <span class="card-label">GitHub</span>
@@ -635,7 +736,7 @@
                     <p class="footer-tagline">Crafting elegant digital experiences with a focus on structure & motion.
                     </p>
                     <div class="footer-socials-big">
-                        <a href="https://github.com/harramos25" class="social-glass-btn"><i
+                        <a href="https://github.com/harramos" class="social-glass-btn"><i
                                 class="ri-github-fill"></i></a>
                         <a href="https://www.linkedin.com/in/harra-ramos-8388753a0/" class="social-glass-btn"><i
                                 class="ri-linkedin-fill"></i></a>
@@ -680,10 +781,84 @@
         </div>
     </footer>
 
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="project-modal-overlay">
+        <button class="modal-close-btn" id="modal-close" aria-label="Close modal">
+            <i class="ri-close-line"></i>
+        </button>
+        <div class="project-modal-content">
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Project Preview">
+                    <div class="modal-overlay-glow"></div>
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title" class="modal-project-title"></h3>
+                    <p id="modal-role" class="modal-project-role"></p>
+                    <div id="modal-desc" class="modal-project-desc"></div>
+                    <div id="modal-tags" class="tech-tags"></div>
+                    <div class="modal-actions" id="modal-actions">
+                        <a id="modal-live-link" href="" class="btn-glass-sm" target="_blank">View Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">
         <i class="ri-arrow-up-line"></i>
     </a>
+
+    <!-- ─── LUX Chatbot ───────────────────────────────────────────── -->
+    <!-- Floating Trigger Button -->
+    <button class="chatbot-trigger" id="chatbot-trigger" aria-label="Chat with LUX">
+        <span class="chatbot-trigger-icon open-icon"><i class="ri-sparkling-2-fill"></i></span>
+        <span class="chatbot-trigger-icon close-icon"><i class="ri-close-line"></i></span>
+        <span class="chatbot-pulse-ring"></span>
+    </button>
+
+    <!-- Chat Panel -->
+    <div class="chatbot-panel" id="chatbot-panel" role="dialog" aria-label="Chat with LUX">
+        <!-- Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-header-avatar">
+                <i class="ri-sparkling-2-fill"></i>
+            </div>
+            <div class="chatbot-header-info">
+                <span class="chatbot-name">LUX</span>
+                <span class="chatbot-status"><span class="status-dot"></span>Online</span>
+            </div>
+            <button class="chatbot-close-btn" id="chatbot-close" aria-label="Close chat">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+
+        <!-- Messages -->
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+
+        <!-- Suggestions -->
+        <div class="chatbot-suggestions" id="chatbot-suggestions">
+            <button class="chat-suggestion">What are Harra's skills?</button>
+            <button class="chat-suggestion">Tell me about her projects</button>
+            <button class="chat-suggestion">How do I hire her?</button>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chatbot-input-area">
+            <textarea
+                class="chatbot-input"
+                id="chatbot-input"
+                placeholder="Ask me anything about Harra..."
+                rows="1"
+                autocomplete="off"
+            ></textarea>
+            <button class="chatbot-send-btn" id="chatbot-send" aria-label="Send message">
+                <i class="ri-send-plane-fill"></i>
+            </button>
+        </div>
+    </div>
+    <!-- ─── End Chatbot ───────────────────────────────────────────────── -->
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -694,6 +869,9 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="js/script.js"></script>
+
+    <!-- LUX Chatbot -->
+    <script src="js/chatbot.js"></script>
 </body>
 
 </html>
