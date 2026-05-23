@@ -27,7 +27,7 @@
       setTimeout(() => {
         appendMessage(
           'assistant',
-          "Hi there! 👋 I'm **LUX**, your guide to Harra's portfolio. Ask me anything — her skills, projects, how to hire her, or just say hi! 😊"
+          "Oh look, a visitor. I'm **LUX**, Harra's AI assistant, and yes, I'm already judging you. Ask me about her skills, projects, or how to hire her. Or just say hi if you have nothing better to do. Try to make your questions semi-intelligent. 🙄"
         );
       }, 400);
     }
