@@ -97,8 +97,6 @@ Additional: C++, Framer Motion, Vite, React Router DOM
     }));
 
     const modelsToTry = [
-      'gemini-1.5-flash-latest',
-      'gemini-1.5-flash',
       'gemini-2.0-flash'
     ];
 
