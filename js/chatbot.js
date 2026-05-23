@@ -152,6 +152,9 @@
       history.push({ role: 'assistant', content: reply });
 
     } catch (err) {
+      if (history.length > 0 && history[history.length - 1].role === 'user') {
+        history.pop();
+      }
       removeTypingIndicator();
       appendMessage(
         'assistant',
