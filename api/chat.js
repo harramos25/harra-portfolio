@@ -97,9 +97,9 @@ Additional: C++, Framer Motion, Vite, React Router DOM
     }));
 
     const modelsToTry = [
+      'gemini-1.5-flash',
       'gemini-2.0-flash',
-      'gemini-2.0-flash-exp',
-      'gemini-2.0-flash-thinking-exp'
+      'gemini-1.5-pro'
     ];
 
     let lastError = null;
@@ -109,7 +109,7 @@ Additional: C++, Framer Motion, Vite, React Router DOM
       try {
         console.log(`Sending request to Gemini API model: ${modelName}...`);
         const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`,
+          `https://generativelanguage.googleapis.com/v1/models/${modelName}:generateContent?key=${apiKey}`,
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
