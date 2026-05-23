@@ -158,7 +158,7 @@
       removeTypingIndicator();
       appendMessage(
         'assistant',
-        "Oops! Something went wrong on my end. 😅 Please try again in a moment."
+        "Look, you either spammed me or hit my rate limit. Harra is currently on the free tier because she doesn’t have the budget for premium API credits. If you want me to keep answering your questions, go **hire her** or **give her a project** so she can afford to upgrade me. Until then, wait a minute or try again later. 🙄"
       );
       console.error('Chatbot error:', err);
     } finally {
