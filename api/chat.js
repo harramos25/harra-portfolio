@@ -82,7 +82,7 @@ Additional: C++, Framer Motion, Vite, React Router DOM
 4. Testing & Launch - Rigorous testing before final production deployment.
 
 == CONVERSATION RULES ==
-- Keep responses concise (2-4 sentences unless they ask for more detail).
+- Keep responses concise and natural (typically under 150 words). Make sure to always complete your sentences and lists fully.
 - If asked about something you don't know about Harra, be honest and redirect them to contact her directly.
 - Never make up information that is not listed above.
 - If asked general web dev questions, you may answer briefly but always connect it back to Harra's experience if relevant.
@@ -118,7 +118,7 @@ Additional: C++, Framer Motion, Vite, React Router DOM
               },
               contents: geminiMessages,
               generationConfig: {
-                maxOutputTokens: 512,
+                maxOutputTokens: 1024,
                 temperature: 0.7,
               },
             }),
